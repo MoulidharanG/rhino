@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #121212;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  padding: 2rem;
+}
+.hibernation-box {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.typing-title {
+  display: inline-block;
+  overflow: hidden;
+  align-items: center;
+  border-right: 3px solid #fff;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  max-width: 0;
+  animation:
+    typing 3.5s steps(40, end) forwards,
+    blinkCursor 0.7s step-end infinite;
+  color: #e3f5da;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+@keyframes typing {
+  from { max-width: 0 }
+  to { max-width: 100% }
+}
+
+@keyframes blinkCursor {
+  50% { border-color: transparent }
+}
+
+.wake-link {
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+.wake-link a {
+  color: #b6ff9c;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.wake-link a:hover {
+  color: #e6ffd8;
+  text-shadow: 0 0 10px #9aff81;
+}
+.delayed {
+  opacity: 0;
+  animation: showLink 1s forwards;
+  animation-delay: 2s; /* slightly after typing finishes */
+}
+
+@keyframes showLink {
+  to { opacity: 1; }
+}
+.sleep-box {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.rhino {
+  width: min(90vw, 480px);
+  height: auto;
+  transform: translateY(15px);
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.4));
+  animation: rhinoBreath 4s ease-in-out infinite;
+}
+
+/* Gentle breathing animation */
+@keyframes rhinoBreath {
+  0%, 100% { transform: translateY(15px); }
+  50% { transform: translateY(20px); }
+}
+.zzz {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  animation: floatUp 4s infinite ease-in-out;
+}
+
+.z1 {
+  top: 80px;
+  right: 60px;
+  animation-delay: 0s;
+}
+
+.z2 {
+  top: 100px;
+  right: 75px;
+  animation-delay: 1.5s;
+}
+
+.z3 {
+  top: 120px;
+  right: 60px;
+  animation-delay: 3s;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+}
+
+.title {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
+.timer {
+  font-size: 1rem;
+  margin: 20px auto;
+  padding: 18px 30px;
+  border-radius: 18px;
+  font-weight: 700;
+  width: fit-content;
+  letter-spacing: 1.5px;
+  backdrop-filter: blur(4px);
+  color: #e3f5da;
+}
+
+
+
+.tagline {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.85;
+  font-style: italic;
+  color: #cce8c3;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+.alive-container {
+  position: relative;
+  display:flex; flex-direction:column;
+}
