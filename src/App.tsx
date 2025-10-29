@@ -6,7 +6,7 @@ import bgimage from "./assets/night-grass.jpg";
 import yawnSound from "./assets/yawnsound.mp3";
 
 
-function getCalendarDiff(fromDate, toDate) {
+function getCalendarDiff(fromDate: Date, toDate: Date) {
   // start with simple difference
   let years = toDate.getFullYear() - fromDate.getFullYear();
   let months = toDate.getMonth() - fromDate.getMonth();
